@@ -1,6 +1,5 @@
 var resources = require('./../../resources/model'),
   utils = require('./../../utils/utils.js');
-
 var interval, sensor;
 var model = resources.pi.sensors;
 var pluginName = 'Temperature & Humidity';
@@ -59,8 +58,7 @@ function simulate() {
 };
 
 function showValue() {
-  console.info('Temperature: %s C, humidity %s \%',
-    model.temperature.value, model.humidity.value);
+  console.info('Temperature: %s C, humidity %s \%', model.temperature.value, model.humidity.value);
 };
 
 //#A Initialize the driver for DHT22 on GPIO 12 (as specified in the model)
