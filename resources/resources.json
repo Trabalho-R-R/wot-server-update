@@ -12,6 +12,24 @@
         "value": 0,
         "gpio": 12
       },
+      "tp_bd_01_01": {
+        "name": "Temperature Sensor",
+        "local": "Bedroom 01",
+        "url": "sensors/temperature/tp_bd_01_01",
+        "description": "An ambient temperature sensor.",
+        "unit": "celsius",
+        "value": 0,
+        "gpio": 12
+      },
+      "tp_kt_01_01": {
+        "name": "Temperature Sensor",
+        "local": "Kitchen 01",
+        "url": "sensors/temperature/tp_kt_01_01",
+        "description": "An ambient temperature sensor.",
+        "unit": "celsius",
+        "value": 0,
+        "gpio": 12
+      },
       "humidity": {
         "name": "Humidity Sensor",
         "url": "sensors/humidity",
