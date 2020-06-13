@@ -1,0 +1,46 @@
+{
+  "name": "wot-pi",
+  "version": "1.0.0",
+  "description": "A Web of Things server for the Pi",
+  "main": "wot-pi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vlad Trifa",
+  "license": "Apache-2.0",
+  "keywords": [
+    "web of things",
+    "building the web of things",
+    "wot",
+    "REST",
+    "HTTP",
+    "mqtt",
+    "pi",
+    "coap",
+    "m2m",
+    "iot",
+    "tcp",
+    "internet of things",
+    "messaging"
+  ],
+  "dependencies": {
+    "bl": "^1.2.2",
+    "body-parser": "^1.19.0",
+    "coap": "^0.20.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "msgpack5": "^3.6.0",
+    "node-json2html": "^1.2.0",
+    "object-observer": "^2.9.3",
+    "object.observe": "^0.2.6",
+    "observe": "^1.4.1",
+    "observe-plus": "^3.0.4-beta",
+    "observer": "0.0.2",
+    "proxy-observable": "^4.0.4",
+    "ws": "^0.7.2"
+  },
+  "optionalDependencies": {
+    "onoff": "^1.0.4",
+    "node-dht-sensor": "^0.0.8"
+  }
+}

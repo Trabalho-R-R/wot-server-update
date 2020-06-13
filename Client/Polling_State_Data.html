@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Polling Sensors Data</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1>Current Sensors Data</h1>
+Temperature: <span id='temp'></span></br>
+Humidity: <span id='hum'></span></br>
+Someone is Present? <span id='pir'></span></br>
+
+<h1>Current LEDs State</h1>
+LED1: <span id='led1'></span></br>
+LED2: <span id='led2'></span></br>
+
+
+<script>
+    $(document).ready( //#A
+        function doPoll() {
+            //Temperature Sensor
+            $.getJSON('http://localhost:8484/pi/sensors/temperature', //#B
+                function (data) { //#C
+                    //console.log(data);
+                    $('#temp').html(data.value + ' ' + data.unit); //#D
+                });
+            // Humidity Sensor
+            $.getJSON('http://localhost:8484/pi/sensors/humidity', //#B
+                function (data) { //#C
+                    //console.log(data);
+                    $('#hum').html(data.value + ' ' + data.unit); //#D
+                });
+            $.getJSON('http://localhost:8484/pi/sensors/pir', //#B
+                function (data) { //#C
+                    console.log(data);
+                    $('#pir').html(data.value+' '); //#D
+                });
+            $.getJSON('http://localhost:8484/pi/actuators/leds/1', //#B
+                function (data) { //#C
+                    console.log(data);
+                    $('#led1').html(data.value + ' '); //#D
+                });
+            // LED2 State
+            $.getJSON('http://localhost:8484/pi/actuators/leds/2', //#B
+                function (data) { //#C
+                    //console.log(data);
+                    $('#led2').html(data.value + ' '); //#D
+                });
+            setTimeout(doPoll, 2000); //#E
+        });
+    //#A Wait until the page is loaded and then call doPoll()
+    //#B Use the AJAX helper to get the JSON payload from the temperature sensor
+    //#C When the response arrives, this function is called
+    //#D Select the "temp" HTML element and update its content using the data.value (the value) and data.unit (the unit) returned in the JSON payload
+    //#E The doPoll() function sets a timer to call itself again in 5 secods (5000 milliseconds)
+</script>
+</body>
+</html>
