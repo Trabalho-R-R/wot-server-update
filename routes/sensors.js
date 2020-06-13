@@ -14,6 +14,11 @@ router.route('/').get(function (req, res, next) {
   //next(); //#B
 });
 
+router.route('/all').get(function (req, res, next) {
+  req.result = resources.pi.sensors; //#A
+  next(); //#B
+});
+
 router.route('/pir').get(function (req, res, next) {
   req.result = resources.pi.sensors.pir;
   next(); //#B
@@ -23,6 +28,16 @@ router.route('/temperature').get(function (req, res, next) {
   req.result = resources.pi.sensors.temperature;
   next();
 });
+
+router.route('/temperature/tp_bd_01_01').get(function (req, res, next) {
+  req.result = resources.pi.sensors.tp_bd_01_01;
+  next();
+})
+
+router.route('/temperature/tp_kt_01_01').get(function (req, res, next) {
+  req.result = resources.pi.sensors.tp_bd_01_01;
+  next();
+})
 
 router.route('/humidity').get(function (req, res, next) {
   req.result = resources.pi.sensors.humidity;
