@@ -4,7 +4,7 @@ var express = require('express'),
   sensorRoutes = require('./../routes/sensors'),
   thingsRoutes = require('./../routes/things'),
   resources = require('./../resources/model'),
-  converter = require('./../middleware/converter'),
+ // converter = require('./../middleware/converter'),
   cors = require('cors'),
   bodyParser = require('body-parser');
 
@@ -23,7 +23,7 @@ app.get('/pi', function (req, res) {
 });
 
 // For representation design
-app.use(converter());
+//app.use(converter());
 module.exports = app;
 
 

@@ -17,7 +17,6 @@ wot-pi
 │   ├── sensors.js
 │   └── things.js
 ├── servers
-│   ├── coap.js
 │   ├── http.js
 │   └── websockets.js
 ├── utils
