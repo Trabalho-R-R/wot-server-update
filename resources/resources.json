@@ -28,11 +28,29 @@
         "description": "An ambient temperature sensor.",
         "unit": "celsius",
         "value": 0,
-        "gpio": 12
+        "gpio": 13
       },
       "humidity": {
         "name": "Humidity Sensor",
         "url": "sensors/humidity",
+        "description": "An ambient humidity sensor.",
+        "unit": "%",
+        "value": 0,
+        "gpio": 15
+      },
+      "hm_bd_01_01": {
+        "name": "Humidity Sensor",
+        "local": "Bedroom 01",
+        "url": "sensors/humidity/hm_hm_01_01",
+        "description": "An ambient humidity sensor.",
+        "unit": "%",
+        "value": 0,
+        "gpio": 16
+      }, 
+      "hm_kt_01_01": {
+        "name": "Humidity Sensor",
+        "local": "Kitchen 01",
+        "url": "sensors/humidity/hm_hm_01_01",
         "description": "An ambient humidity sensor.",
         "unit": "%",
         "value": 0,
