@@ -44,6 +44,16 @@ router.route('/humidity').get(function (req, res, next) {
   next();
 });
 
+router.route('/humidity/tp_bd_01_01').get(function (req, res, next) {
+  req.result = resources.pi.sensors.hm_bd_01_01;
+  next();
+})
+
+router.route('/humidity/tp_kt_01_01').get(function (req, res, next) {
+  req.result = resources.pi.sensors.hm_bd_01_01;
+  next();
+})
+
 //app.post('/myaction', function(req, res) {
 //    res.send('You sent the name "' + req.body.name + '".');
 //});
