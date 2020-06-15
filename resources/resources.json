@@ -28,7 +28,16 @@
         "description": "An ambient temperature sensor.",
         "unit": "celsius",
         "value": 0,
-        "gpio": 13
+        "gpio": 12
+      },
+      "tp_wc_01_01": {
+        "name": "Temperature Sensor",
+        "local": "WC 01",
+        "url": "sensors/temperature/tp_wc_01_01",
+        "description": "An ambient temperature sensor.",
+        "unit": "celsius",
+        "value": 0,
+        "gpio": 12
       },
       "humidity": {
         "name": "Humidity Sensor",
@@ -36,7 +45,7 @@
         "description": "An ambient humidity sensor.",
         "unit": "%",
         "value": 0,
-        "gpio": 15
+        "gpio": 12
       },
       "hm_bd_01_01": {
         "name": "Humidity Sensor",
@@ -45,12 +54,21 @@
         "description": "An ambient humidity sensor.",
         "unit": "%",
         "value": 0,
-        "gpio": 16
+        "gpio": 12
       }, 
       "hm_kt_01_01": {
         "name": "Humidity Sensor",
         "local": "Kitchen 01",
-        "url": "sensors/humidity/hm_hm_01_01",
+        "url": "sensors/humidity/hm_kt_01_01",
+        "description": "An ambient humidity sensor.",
+        "unit": "%",
+        "value": 0,
+        "gpio": 12
+      },
+      "hm_wc_01_01": {
+        "name": "Humidity Sensor",
+        "local": "WC 01",
+        "url": "sensors/humidity/hm_wc_01_01",
         "description": "An ambient humidity sensor.",
         "unit": "%",
         "value": 0,
@@ -61,7 +79,7 @@
         "url": "sensors/pir",
         "description": "A passive infrared sensor. When 'true' someone is present.",
         "value": true,
-        "gpio": 17
+        "gpio": 12
       }
     },
     "actuators": {
